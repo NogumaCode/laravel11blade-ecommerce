@@ -8,24 +8,22 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 
-class UserSeeder extends Seeder
+class VendorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-
-        DB::table('users')->insert([
+        DB::table('vendors')->insert([
             [
-                'name'=>'User',
-                'username'=>'user',
-                'email'=>'user@gmail.com',
-                'role' =>'user',
-                'status'=>'active',
+                'name' => 'Vendor',
+                'username' => 'vendor',
+                'email' => 'vendor@gmail.com',
+                'role' => 'vendor',
+                'status' => 'active',
                 'password' => Hash::make('password'),
             ],
         ]);
-        //
     }
 }
